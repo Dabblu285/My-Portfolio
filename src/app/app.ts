@@ -1,5 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { CommonModule, NgFor } from '@angular/common';
+import { Component, HostListener, inject, OnInit, signal } from '@angular/core';
+
 import { RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -9,4 +12,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('portfolio');
-}
+
+ }

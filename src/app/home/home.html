@@ -1,0 +1,321 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4 text-warning" (click)="scrollToSection('home')" style="cursor: pointer;">
+      Dabblu<span class="text-light">Ali</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-uppercase fw-semibold">
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('home')" style="cursor: pointer;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('about')" style="cursor: pointer;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('skills')" style="cursor: pointer;">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('experience')" style="cursor: pointer;">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('portfolio')" style="cursor: pointer;">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('contact')" style="cursor: pointer;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero text-center text-white d-flex align-items-center justify-content-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold mb-3 animate-fade">Hi, I'm <span class="text-warning">Dabblu Ali</span></h1>
+        <h2 class="h3 mb-4 animate-slide">.NET Full Stack Developer</h2>
+        <p class="lead mb-4 animate-fade">Passionate about building scalable web applications with ASP.NET Core, Angular & SQL Server</p>
+        <div class="animate-slide">
+          <!-- <button class="btn btn-warning btn-lg px-4 rounded-pill shadow-sm me-3" 
+                  (click)="scrollToSection('portfolio')">
+            View My Work
+          </button> -->
+          <button class="btn btn-outline-light btn-lg px-4 rounded-pill" 
+                  (click)="scrollToSection('contact')" type="button">
+            Hire Me
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Animated Background Elements -->
+  <div class="hero-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-5 mb-4 mb-md-0 text-center">
+        <div class="about-img-container">
+      
+
+          <!-- <img src="https://via.placeholder.com/400x400/41228e/ffffff?text=DA" 
+               class="img-fluid rounded-4 shadow-lg about-img" alt="Dabblu Ali">
+                -->
+               <img src="/images/dabblu-ali.jpg" 
+     class="img-fluid rounded-4 shadow-lg about-img" 
+     alt="Dabblu Ali">
+
+          <div class="img-overlay"></div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <h2 class="fw-bold mb-3 section-title">About Me</h2>
+        <p class="text-muted mb-3 fs-5">
+          Passionate .NET Full Stack Developer with 1 year of hands-on experience in building robust web applications 
+          using <strong>ASP.NET Core, Web API, Angular, and SQL Server</strong>. I specialize in creating scalable solutions 
+          that deliver exceptional user experiences.
+        </p>
+        <div class="row mb-4">
+          <div class="col-sm-6">
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>ASP.NET Core MVC</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Web API Development</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Entity Framework</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>C# Programming</li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Angular & TypeScript</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>SQL Server</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>RESTful Services</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Bootstrap 5</li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn btn-dark rounded-pill px-4 me-3" (click)="scrollToSection('contact')">
+          Get In Touch
+        </button>
+        
+       <!-- Download Button -->
+<!-- <button (click)="downloadSelectedFile()" [disabled]="!selectedFile" class="btn btn-outline-dark rounded-pill px-4">Download CV</button>
+<div class="d-none">
+<input type="file" accept=".pdf" (change)="onFileSelected($event)" />
+</div> -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-5 text-center section-title">Technical Skills</h2>
+    <div class="row g-4">
+   
+         <div class="col-md-3 col-sm-6" *ngFor="let skill of skills()">
+    <div class="skill-box p-4 shadow-sm rounded-4 text-center">
+      <div class="skill-icon mb-3">
+        <i [class]="skill.icon + ' display-4 text-warning'"></i>
+      </div>
+      <h5 class="fw-semibold mb-2">{{ skill.name }}</h5>
+      <div class="skill-progress">
+        <div class="progress" style="height: 6px;">
+          <div class="progress-bar bg-warning" [style.width]="skill.percentage"></div>
+        </div>
+        <small class="text-muted">{{ skill.percentage }}</small>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience & Education -->
+<section id="experience" class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-5">
+        <h2 class="fw-bold mb-4 section-title">Experience</h2>
+        <div class="timeline">
+          <!-- @for (exp of experiences; track exp.title) {
+            <div class="timeline-item">
+              <div class="timeline-content shadow-sm rounded-4 p-4">
+                <span class="timeline-date">{{ exp.period }}</span>
+                <h5 class="fw-semibold">{{ exp.title }}</h5>
+                <p class="text-muted mb-2">{{ exp.company }}</p>
+                <p class="small">{{ exp.description }}</p>
+              </div>
+            </div>
+          } -->
+            <div *ngFor="let exp of experiences()">
+  <div class="timeline-item">
+    <div class="timeline-content shadow-sm rounded-4 p-4">
+      <span class="timeline-date">{{ exp.period }}</span>
+      <h5 class="fw-semibold">{{ exp.title }}</h5>
+      <p class="text-muted mb-2">{{ exp.company }}</p>
+      <p class="small">{{ exp.description }}</p>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-4 section-title">Education</h2>
+        <div class="timeline">
+
+             <div class="timeline-item" *ngFor="let edu of education()">
+    <div class="timeline-content shadow-sm rounded-4 p-4">
+      <span class="timeline-date">{{ edu.year }}</span>
+      <h5 class="fw-semibold">{{ edu.degree }}</h5>
+      <p class="text-muted mb-2">{{ edu.institution }}</p>
+      <p class="small">{{ edu.description }}</p>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<!-- <section id="portfolio" class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-5 text-center section-title">My Projects</h2>
+    <div class="row g-4">
+  
+    </div>
+    <div class="row g-4">
+  <div class="col-md-4" *ngFor="let project of projects()">
+    <div class="card border-0 shadow-lg rounded-4 portfolio-card h-100">
+      
+     
+      <div class="card-img-container position-relative">
+        <img [src]="project.image" class="card-img-top rounded-top-4" [alt]="project.title">
+        <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" style="background: rgba(0,0,0,0.6); opacity: 0; transition: 0.3s;">
+          <div class="overlay-content text-center">
+            <h5 class="text-white">{{ project.title }}</h5>
+            <p class="text-light">{{ project.technologies }}</p>
+            <div class="btn-group">
+              <button class="btn btn-sm btn-warning me-2" (click)="viewProjectDetails(project)">
+                View Details
+              </button>
+              <button class="btn btn-sm btn-outline-light">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="card-body">
+        <h5 class="card-title fw-semibold">{{ project.title }}</h5>
+        <p class="card-text text-muted">{{ project.description }}</p>
+        <div class="tech-tags">
+          <span class="badge bg-light text-dark me-1" *ngFor="let tech of project.techList">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section> -->
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="fw-bold mb-3 section-title">Get In Touch</h2>
+        <p class="text-muted mb-5 fs-5">I'm available for freelance work and full-time opportunities</p>
+        
+        <div class="row mb-5">
+          <div class="col-md-4 mb-4">
+            <div class="contact-info shadow-sm rounded-4 p-4 h-100">
+              <i class="bi bi-envelope-fill display-4 text-warning mb-3"></i>
+              <h5>Email</h5>
+              <p class="mb-0">dabbluali3&#64;gmail.com</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="contact-info shadow-sm rounded-4 p-4 h-100">
+              <i class="bi bi-telephone-fill display-4 text-warning mb-3"></i>
+              <h5>Phone</h5>
+              <p class="mb-0">+918433387232</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="contact-info shadow-sm rounded-4 p-4 h-100">
+              <i class="bi bi-geo-alt-fill display-4 text-warning mb-3"></i>
+              <h5>Location</h5>
+              <p class="mb-0">Varanasi, UP, India</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card shadow-sm rounded-4 border-0">
+              <div class="card-body p-4">
+                <h5 class="card-title mb-4">Send Message</h5>
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                  <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" formControlName="name" required>
+                    @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                      <div class="text-danger small">Name is required</div>
+                    }
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email" formControlName="email" required>
+                    @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                      <div class="text-danger small">Valid email is required</div>
+                    }
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message" formControlName="message" required></textarea>
+                    @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+                      <div class="text-danger small">Message is required</div>
+                    }
+                  </div>
+                  <button type="submit" class="btn btn-warning w-100 rounded-pill" 
+                          [disabled]="contactForm.invalid">
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark text-center text-white">
+  <div class="container">
+    <div class="social-links mb-3">
+      <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+      <a href="#" class="text-white me-3"><i class="bi bi-github fs-4"></i></a>
+      <a href="mailto:dabbluali3@gmail.com" class="text-white me-3"><i class="bi bi-envelope-fill fs-4"></i></a>
+    </div>
+    <p class="mb-0">&copy; 2024 Dabblu Ali. .NET Full Stack Developer | Crafted with ❤️ using Angular 20</p>
+  </div>
+</footer>
