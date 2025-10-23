@@ -64,7 +64,7 @@ export class Home {
     //   description: 'Developing full-stack web applications using ASP.NET Core MVC, Web API, Angular, and SQL Server. Building responsive UIs and robust backend services.'
     // }
     { 
-    period: 'Mai 2024 – July 2024', 
+    period: 'May 2024 – July 2024', 
     title: 'Hotel Management System Developer',
     company: 'Hindsol Software Company',
     description: 'Developed a Hotel Management System with secure user authentication, role-based access, room booking, customer management, and automated billing using ASP.NET Core MVC, SQL Server, and Bootstrap. Delivered a responsive and maintainable solution following OOP and layered architecture.'
