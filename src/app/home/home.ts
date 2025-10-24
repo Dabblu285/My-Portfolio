@@ -238,10 +238,28 @@ export class Home {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      console.log('Form submitted:', this.contactForm.value);
-      alert('Message sent successfully!');
-      this.contactForm.reset();
-    }
+    const formValue = this.contactForm.value;
+    const name = formValue.name;
+    const email = formValue.email;
+    const message = formValue.message;
+
+    // Your WhatsApp number (with country code, no + or spaces)
+    const phoneNumber = '8433387232';
+
+    // Encode the message
+    const whatsappMessage = `Hello, I am ${name}. My email is ${email}. Message: ${message}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    // Create WhatsApp link
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp chat
+    window.open(whatsappUrl, '_blank');
+
+    this.contactForm.reset();
+  } else {
+    alert('Please fill all required fields!');
+  }
   }
 
   private initializeAnimations(): void {
