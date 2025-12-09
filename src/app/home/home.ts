@@ -64,28 +64,28 @@ export class Home {
     //   description: 'Developing full-stack web applications using ASP.NET Core MVC, Web API, Angular, and SQL Server. Building responsive UIs and robust backend services.'
     // }
     { 
-    period: 'May 2024 – July 2024', 
+    period: 'Dec 2024 – March 2025', 
     title: 'Hotel Management System Developer',
-    company: 'Hindsol Software Company',
+    company: 'Microhind  Software Company ',
     description: 'Developed a Hotel Management System with secure user authentication, role-based access, room booking, customer management, and automated billing using ASP.NET Core MVC, SQL Server, and Bootstrap. Delivered a responsive and maintainable solution following OOP and layered architecture.'
   },
   {
-    period: 'July 2024 – July 2025', // <-- Show as 1 year
-    title: 'Full Stack Developer',
-    company: 'MicroHind Software, Mumbai',
-    description: 'Developed and enhanced an E-Commerce platform: https://enthralaviation-demo.microhind.com/. Implemented backend APIs with ASP.NET Core MVC and SQL Server, and frontend features with Angular. Improved functionality and booking accuracy.'
+    period: 'March 2025 – August 2025', // <-- Show as 1 year
+    title: 'E-Commerce',
+    company: 'MicroHind Software Company',
+    description: 'Developed a complete e-commerce system using .NET Core Web API and Angular. Built REST APIs for products, categories, cart, orders, and customer accounts. Implemented JWT authentication with role-based access. Integrated Angular HttpClient for smooth API communication. Designed a normalized SQL Server database. Added features like product search, filtering, cart operations, and order placement. Ensured clean architecture and scalable code structure.'
   },
   {
-    period: 'July 2025 – Aug 2025',
-    title: 'E-Commerce Bug Fix Developer',
-    company: 'BinaryEdge Technologies Pvt. Ltd.',
-    description: 'Fixed critical bugs in an existing E-Commerce platform using ASP.NET Core MVC and Angular, improving site reliability and user experience.'
-  },
+    period: 'August 2025 – Dec 2025',
+    title: ' Flight Booking & Management System ',
+    company: 'MicroHind Software Company',
+    description: 'Developed and enhanced a Flight Booking & Management System https://enthralaviation-demo.microhind.com using ASP.NET Core MVC, SQL Server, and Angular. Improved booking accuracy, system performance, and user experience through optimized APIs and frontend features.'
+   },
   {
-    period: 'Sept 2025 – Oct 2025',
-    title: 'Carpet PPT Management Software Developer',
+    period: 'August 2025 – Dec 2025',
+    title: 'Carpet PPT Management Software ',
     company: 'Freelance / Local Client',
-    description: 'Implemented a Carpet Management module in .NET Core MVC following Clean Architecture principles. Delivered functional and user-friendly UI for the client.'
+    description: ' Implemented a Carpet Management module in .NET Core MVC following Clean Architecture principles. Delivered functional and user-friendly UI for the client.'
   }
   ]);
 
