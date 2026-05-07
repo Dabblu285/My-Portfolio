@@ -13,13 +13,12 @@ interface Skill {
   icon: string;
 }
 
-interface Experience {
+export interface Experience {
   period: string;
   title: string;
   company: string;
   description: string;
 }
-
 interface Education {
   year: string;
   degree: string;
@@ -37,11 +36,12 @@ interface Project {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor,ReactiveFormsModule,FormsModule,CommonModule],
+  imports: [ReactiveFormsModule,FormsModule,CommonModule],
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrl: './home.css',
+
 })
-export class Home {
+export class Home  {
   private fb = inject(FormBuilder);
   contactForm: FormGroup;
 
@@ -57,36 +57,28 @@ export class Home {
   ]);
 
   experiences = signal<Experience[]>([
-    // { 
-    //   period: '2023 - Present', 
-    //   title: '.NET Full Stack Developer', 
-    //   company: 'Freelance / Self-Employed',
-    //   description: 'Developing full-stack web applications using ASP.NET Core MVC, Web API, Angular, and SQL Server. Building responsive UIs and robust backend services.'
-    // }
-    { 
-    period: 'Dec 2024 – March 2025', 
-    title: 'Hotel Management System Developer',
-    company: 'Microhind  Software Company ',
-    description: 'Developed a Hotel Management System with secure user authentication, role-based access, room booking, customer management, and automated billing using ASP.NET Core MVC, SQL Server, and Bootstrap. Delivered a responsive and maintainable solution following OOP and layered architecture.'
-  },
-  {
-    period: 'March 2025 – August 2025', // <-- Show as 1 year
-    title: 'E-Commerce',
-    company: 'MicroHind Software Company',
-    description: 'Developed a complete e-commerce system using .NET Core Web API and Angular. Built REST APIs for products, categories, cart, orders, and customer accounts. Implemented JWT authentication with role-based access. Integrated Angular HttpClient for smooth API communication. Designed a normalized SQL Server database. Added features like product search, filtering, cart operations, and order placement. Ensured clean architecture and scalable code structure.'
-  },
-  {
-    period: 'August 2025 – Dec 2025',
-    title: ' Flight Booking & Management System ',
-    company: 'MicroHind Software Company',
-    description: 'Developed and enhanced a Flight Booking & Management System https://enthralaviation-demo.microhind.com using ASP.NET Core MVC, SQL Server, and Angular. Improved booking accuracy, system performance, and user experience through optimized APIs and frontend features.'
-   },
-  {
-    period: 'August 2025 – Dec 2025',
-    title: 'Carpet PPT Management Software ',
-    company: 'Freelance / Local Client',
-    description: ' Implemented a Carpet Management module in .NET Core MVC following Clean Architecture principles. Delivered functional and user-friendly UI for the client.'
-  }
+    {
+       period: '2 Years 6 Months',
+    title: 'DOT NET Core + Angular Full Stack Developer',
+    company: 'Microhind Private Limited',
+    description: `
+• Developed and maintained full-stack web applications using ASP.NET Core MVC, .NET Core Web API, Angular, and SQL Server.
+
+• Built scalable ERP solutions including Carpet ERP, Hotel Management System, School Management System, and E-Commerce applications.
+
+• Designed responsive UI using Angular, HTML5, CSS3, and Bootstrap for better user experience.
+
+• Created secure REST APIs with JWT Authentication and role-based authorization.
+
+• Managed SQL Server database design, stored procedures, query optimization, and reporting modules.
+
+• Implemented Barcode Generation, PDF Reports, API Integration, and Postman testing workflows.
+
+• Applied Clean Architecture, OOP concepts, and layered architecture for maintainable code.
+
+• Leveraged AI tools like GitHub Copilot and ChatGPT to improve productivity and development speed.
+    `
+    }
   ]);
 
   education = signal<Education[]>([
